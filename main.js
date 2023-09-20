@@ -15,6 +15,10 @@ function eliminarPaciente() {
       console.log("No hay pacientes ingresados para eliminar.");
       return;
     }
+    console.log("Indice de los pacientes disponibles:");
+    for (let i = 0; i < pacientes.length; i++) {
+      console.log(`Índice ${i + 1}: ${pacientes[i].nombre}`);
+    }
   const pacienteMuerto = parseInt(prompt("Ingrese el número del paciente que desea eliminar:")) - 1;
   if (isNaN(pacienteMuerto) || pacienteMuerto < 0 || pacienteMuerto >= pacientes.length) {
     console.log("Número de paciente inválido.");
@@ -29,7 +33,7 @@ function propiedad(Pasteur) {
     return;
   }
   for (let i = 0; i < pacientes.length; i++) {
-    console.log(`Paciente ${i + 1}: ${pacientes[i][propiedad]}`)
+    console.log(`Paciente ${i + 1}: ${pacientes[i][Pasteur]}`)
   }
 }
 do {
